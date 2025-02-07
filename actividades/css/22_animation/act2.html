@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Noria</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100hv;
+                background-color: blue;
+                margin: 0;
+            }
+
+            .noria {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border: 20px solid brown;
+                border-radius: 50%;
+                animation: rotar 10s linear infinite;
+            }
+
+            @keyframes rotar {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .cabinas {
+                position: absolute;
+                width: 10%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .cabina {
+                position: absolute;
+                width: 20px;
+                height: 40px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 5px;
+                transform-origin: 100px 100px;
+            }
+
+            .cabina:nth-child(1) { transform: rotate(0deg) translateX(90px); }
+            .cabina:nth-child(2) { transform: rotate(6deg) translateX(90px); }
+            .cabina:nth-child(3) { transform: rotate(120deg) translateX(90px); }
+            .cabina:nth-child(4) { transform: rotate(180deg) translateX(90px); }
+            .cabina:nth-child(5) { transform: rotate(240deg) translateX(90px); }
+            .cabina:nth-child(6) { transform: rotate(300deg) translateX(90px); }
+        </style>
+    </head>
+   <body>
+    <div class="noria">
+        <div class="cabinas">
+            <div class="cabina"></div>
+            <div class="cabina"></div>
+            <div class="cabina"></div>
+            <div class="cabina"></div>
+            <div class="cabina"></div>
+            <div class="cabina"></div>
+
+        </div>
+    </div>
+   </body> 
+</html>
