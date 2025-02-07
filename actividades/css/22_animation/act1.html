@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eclipse Solar</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100hv;
+                background-color: black;
+                margin: 0;
+            }
+
+            .sol {
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            .luna {
+                width: 80px;
+                height: 80px;
+                background-color: gray;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: eclipse 4s infinite;
+                z-index: 0;
+            }
+
+            @keyframes eclipse {
+                0% {
+                    transform: translate(-50%, -50%) translateX(-150%);
+                }
+                25% {
+                    transform: translate(-50%, -50%) translateX(0);
+                }
+                50% {
+                    transform: translate(-50%, -50%) translateX(0);
+                }
+                75% {
+                    transform: translate(-50%, -50%) translateX(-150%);
+                }
+                100% {
+                    transform: translate(-50%, -50%) translateX(-150%);
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sol"></div>
+        <div class="luna"></div>
+    </body>
+</html>
